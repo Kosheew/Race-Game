@@ -1,18 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
+using Commands;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HorseContext : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public HorseSO horseSO;
+    [SerializeField] private Text textNumber;
+    public HorseAnimation horseAnimation { get; private set; }
+    public Rigidbody horseRigidBody { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    private CommandHorseFactory _commandHorseFactory;
+
+    public void Inject(DependencyContainer container)
     {
+        _commandHorseFactory = container.Resolve<CommandHorseFactory>();
         
+        horseAnimation = GetComponent<HorseAnimation>();
+        horseRigidBody = GetComponent<Rigidbody>();
+        
+        horseAnimation.Initialize();
+        textNumber.text = horseSO.HorseNumber.ToString();
+        
+        _commandHorseFactory.CreateIdleCommand(this);
     }
 }

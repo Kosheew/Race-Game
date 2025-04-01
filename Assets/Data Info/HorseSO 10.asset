@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb7e59d449499d4597d8da5f30ee5c3, type: 3}
+  m_Name: HorseSO 10
+  m_EditorClassIdentifier: 
+  baseSpeedRange: {x: 10, y: 14}
+  speedChangeRange: {x: -0.5, y: 2}
+  accelerationTimeRange: {x: 1, y: 3}
+  speedLimitRange: {x: 10, y: 14}
+  horseIcon: {fileID: 21300000, guid: ccd752fa9513e7c43b212f204da1cbfb, type: 3}
+  horseNumber: 10
